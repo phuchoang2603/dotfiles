@@ -1,0 +1,72 @@
+{
+    "com.github.plibither8.ulauncher-vscode-recent": {
+        "id": "com.github.plibither8.ulauncher-vscode-recent",
+        "url": "https://github.com/plibither8/ulauncher-vscode-recent",
+        "updated_at": "2025-05-02T08:50:59.217649",
+        "last_commit": "60a5106821478f965e4e24dbe1833f6af0d437f1",
+        "last_commit_time": "2023-12-01T07:25:12"
+    },
+    "com.github.tchar.ulauncher-albert-calculate-anything": {
+        "id": "com.github.tchar.ulauncher-albert-calculate-anything",
+        "url": "https://github.com/tchar/ulauncher-albert-calculate-anything",
+        "updated_at": "2025-05-02T08:51:01.538920",
+        "last_commit": "037965a44e6f6f496e7ad71ec1651b9edfcde32d",
+        "last_commit_time": "2024-05-29T21:57:26"
+    },
+    "com.github.iboyperson.ulauncher-system": {
+        "id": "com.github.iboyperson.ulauncher-system",
+        "url": "https://github.com/iboyperson/ulauncher-system",
+        "updated_at": "2025-05-02T08:51:02.928007",
+        "last_commit": "7dedd992709fa2297735cddf852404144d4da47c",
+        "last_commit_time": "2023-11-14T16:53:20"
+    },
+    "com.github.friday.ulauncher-gnome-settings": {
+        "id": "com.github.friday.ulauncher-gnome-settings",
+        "url": "https://github.com/friday/ulauncher-gnome-settings",
+        "updated_at": "2025-05-02T08:51:04.113430",
+        "last_commit": "58aa3c1e90d46007b0bbbae5bfbd5093b527032f",
+        "last_commit_time": "2023-11-25T22:40:04"
+    },
+    "com.github.e1bos.ulauncher-media-controller": {
+        "id": "com.github.e1bos.ulauncher-media-controller",
+        "url": "https://github.com/E1Bos/ulauncher-media-controller",
+        "updated_at": "2025-05-02T08:51:05.258459",
+        "last_commit": "ceb22592f78b3f9b3abafad3bb88e7581efa65fa",
+        "last_commit_time": "2025-01-21T16:09:07"
+    },
+    "com.github.fernaper.ulauncher-vscode": {
+        "id": "com.github.fernaper.ulauncher-vscode",
+        "url": "https://github.com/fernaper/ulauncher-vscode",
+        "updated_at": "2025-05-02T08:51:06.375229",
+        "last_commit": "7cfa181dd34dfef49b9587998d4b10c529bf5eb9",
+        "last_commit_time": "2022-08-20T17:52:13"
+    },
+    "com.github.ulauncher.ulauncher-kill": {
+        "id": "com.github.ulauncher.ulauncher-kill",
+        "url": "https://github.com/Ulauncher/ulauncher-kill",
+        "updated_at": "2025-05-02T08:51:07.588014",
+        "last_commit": "00ffe8266dbb6c2aea7d86a6363e51cec4b1981f",
+        "last_commit_time": "2022-11-26T16:15:05"
+    },
+    "com.github.kalligator.ulauncher-gemini-direct": {
+        "id": "com.github.kalligator.ulauncher-gemini-direct",
+        "url": "https://github.com/kalligator/ulauncher-gemini-direct",
+        "updated_at": "2025-05-02T08:51:08.740194",
+        "last_commit": "b0d8986644e2f28bdf4f9fa492675118fecf322f",
+        "last_commit_time": "2025-04-28T18:20:32"
+    },
+    "com.github.hillaryychan.ulauncher-fzf": {
+        "id": "com.github.hillaryychan.ulauncher-fzf",
+        "url": "https://github.com/hillaryychan/ulauncher-fzf",
+        "updated_at": "2025-05-02T08:51:09.920997",
+        "last_commit": "e8137dae6448041fc53ae418263501b068857073",
+        "last_commit_time": "2023-05-16T12:35:35"
+    },
+    "com.github.aksdb.ulauncher-gitmoji": {
+        "id": "com.github.aksdb.ulauncher-gitmoji",
+        "url": "https://github.com/aksdb/ulauncher-gitmoji",
+        "updated_at": "2025-05-02T08:51:11.034802",
+        "last_commit": "aa62ee142ff08fd8bd01ab67342e7cdf7887f0cd",
+        "last_commit_time": "2023-01-30T09:52:31"
+    }
+}

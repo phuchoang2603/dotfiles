@@ -1,0 +1,24 @@
+swipe:
+  3:
+    left:
+      sendkey: "LEFTCTRL+PAGEUP" # History back
+    right:
+      sendkey: "LEFTCTRL+PAGEDOWN" # History forward
+    up:
+      sendkey: "LEFTCTRL+T" # Open a new tab
+    down:
+      sendkey: "LEFTCTRL+W" # Close a tab
+
+hold:
+  3:
+    sendkey: "F5" # Refresh page
+  4:
+    sendkey: "LEFTMETA+W" # Close application
+
+threshold:
+  swipe: 1
+  pinch: 1
+
+interval:
+  swipe: 1
+  pinch: 1
