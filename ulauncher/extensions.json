@@ -34,11 +34,11 @@
         "last_commit": "aa62ee142ff08fd8bd01ab67342e7cdf7887f0cd",
         "last_commit_time": "2023-01-30T09:52:31"
     },
-    "com.github.e1bos.ulauncher-media-controller": {
-        "id": "com.github.e1bos.ulauncher-media-controller",
-        "url": "https://github.com/E1Bos/ulauncher-media-controller",
-        "updated_at": "2025-05-02T20:28:54.345233",
-        "last_commit": "096cfa8d0c3b38655e12c517b0c1c384e1e27fc3",
-        "last_commit_time": "2025-05-02T16:58:04"
+    "com.github.dankni95.ulauncher-playerctl": {
+        "id": "com.github.dankni95.ulauncher-playerctl",
+        "url": "https://github.com/Dankni95/ulauncher-playerctl",
+        "updated_at": "2025-05-02T22:24:12.542021",
+        "last_commit": "c2efafd66c3d60445a545f9f202b82202f93cd70",
+        "last_commit_time": "2022-03-23T21:18:25"
     }
 }
