@@ -128,5 +128,25 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1745808434.622225
+    },
+    "d26b0a12-09ea-4d14-bb21-d8d2f612e425": {
+        "id": "d26b0a12-09ea-4d14-bb21-d8d2f612e425",
+        "name": "Github personal",
+        "keyword": "ghp",
+        "cmd": "https://github.com/phuchoang2603?tab=repositories&q=%s",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1746263131.7189832
+    },
+    "559ea620-96b6-41a8-a6a4-82a11866717e": {
+        "id": "559ea620-96b6-41a8-a6a4-82a11866717e",
+        "name": "Github global",
+        "keyword": "gh",
+        "cmd": "https://github.com/search?q=%s&type=repositories",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1746263178.6512327
     }
 }
