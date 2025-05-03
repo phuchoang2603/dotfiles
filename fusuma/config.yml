@@ -1,4 +1,9 @@
 swipe:
+  2:
+    left:
+      sendkey: "LEFTALT+RIGHT"
+    right:
+      sendkey: "LEFTALT+LEFT"
   3:
     left:
       sendkey: "LEFTCTRL+PAGEUP" # History back
@@ -14,11 +19,3 @@ hold:
     sendkey: "F5" # Refresh page
   4:
     sendkey: "LEFTMETA+W" # Close application
-
-threshold:
-  swipe: 1
-  pinch: 1
-
-interval:
-  swipe: 1
-  pinch: 1
