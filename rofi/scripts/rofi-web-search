@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+# Rofi-based web search and launcher with icons and static site support
+
+ROFI="${ROFI:-rofi}"
+rofi_flags="-normal-window -show-icons"
+
+# Define providers: Name → URL (query will be appended if needed)
+declare -A urls=(
+    ["Google Search"]="https://google.com/search?q="
+    ["Youtube"]="https://www.youtube.com/results?search_query="
+    ["Messenger"]="https://www.messenger.com/"
+    ["Gmail0"]="https://mail.google.com/mail/u/0/"
+    ["Gmail1"]="https://mail.google.com/mail/u/1/#inbox"
+    ["Google Drive"]="https://drive.google.com/drive/search?q="
+    ["Onenote"]="https://m365.cloud.microsoft/launch/onenote"
+    ["Onedrive"]="https://12221f-my.sharepoint.com/query?q="
+    ["Outlook"]="https://outlook.office365.com/mail/"
+    ["WhatsApp"]="https://web.whatsapp.com/"
+    ["Zalo"]="https://chat.zalo.me/"
+    ["Discord"]="https://discord.com/channels/@me"
+    ["Todo"]="https://to-do.office.com/tasks/inbox"
+    ["Github personal"]="https://github.com/phuchoang2603?tab=repositories&q="
+    ["Github global"]="https://github.com/search?q="
+)
+
+# Icons (standard icon theme names)
+declare -A icons=(
+    ["Google Search"]="google"
+    ["Google Drive"]="google-drive"
+    ["Youtube"]="youtube"
+    ["Gmail0"]="gmail"
+    ["Gmail1"]="gmail"
+    ["Onedrive"]="ms-onedrive"
+    ["Outlook"]="ms-outlook"
+    ["Onenote"]="ms-onenote"
+    ["Todo"]="todoist"
+    ["Messenger"]="messengerfordesktop"
+    ["WhatsApp"]="whatsapp"
+    ["Zalo"]="google-chat"
+    ["Discord"]="discord"
+    ["WhatsApp"]="whatsapp"
+    ["Github personal"]="github"
+    ["Github global"]="github"
+)
+
+# Compose list for rofi
+provider_list=""
+for name in "${!urls[@]}"; do
+    provider_list+="${name}\x00icon\x1f${icons[$name]:-web-browser}\n"
+done
+
+# Step 1: Choose provider
+provider=$(echo -e "$provider_list" | $ROFI $rofi_flags -dmenu -i -p "Choose site")
+
+[ -z "$provider" ] && exit 1
+
+base_url="${urls[$provider]}"
+
+# Step 2: If provider URL ends in `=`, it's a search engine
+if [[ "$base_url" == *"=" ]]; then
+    query=$($ROFI $rofi_flags -dmenu -i -p "Search $provider:")
+    [ -z "$query" ] && exit 1
+    xdg-open "${base_url}${query// /+}" &>/dev/null
+else
+    xdg-open "$base_url" &>/dev/null
+fi
+
+exit 0
