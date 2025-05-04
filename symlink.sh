@@ -17,6 +17,7 @@ EXCLUDE_ITEMS=(
   "symlink.sh"
   ".git"
   ".gitignore"
+  "README.md"
   "${COPY_ITEMS[@]}"
 )
 
@@ -29,10 +30,8 @@ echo "🔗 Creating symlinks..."
 
 for item in "$DOTFILES_DIR"/* "$DOTFILES_DIR"/.*; do
   basename_item="$(basename "$item")"
-
   # Skip . and ..
   [[ "$basename_item" == "." || "$basename_item" == ".." ]] && continue
-
   # Skip excluded items
   if [[ " ${EXCLUDE_ITEMS[*]} " == *" $basename_item "* ]]; then
     continue
@@ -63,5 +62,10 @@ for item in "${COPY_ITEMS[@]}"; do
     $DRY_RUN || cp -r "$f" "$dest/"
   done
 done
+
+[ -f "~/.bashrc" ] && mv ~/.bashrc ~/.bashrc.bak
+cp ~/.config/bashrc ~/.bashrc
+[ -f "~/.inputrc" ] && mv ~/.inputrc ~/.inputrc.bak
+cp ~/.config/inputrc ~/.inputrc
 
 echo "✅ Done."
