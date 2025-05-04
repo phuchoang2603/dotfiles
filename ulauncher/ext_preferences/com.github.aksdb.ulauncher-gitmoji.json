@@ -1,0 +1,10 @@
+{
+    "preferences": {
+        "copy_mode": "emoji"
+    },
+    "triggers": {
+        "gitmoji_kw": {
+            "keyword": "em"
+        }
+    }
+}

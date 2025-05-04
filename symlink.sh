@@ -10,6 +10,7 @@ COPY_ITEMS=(
   "fcitx5"
   "filecxx"
   "rclone"
+  "Code"
 )
 
 # Items to exclude from symlinking

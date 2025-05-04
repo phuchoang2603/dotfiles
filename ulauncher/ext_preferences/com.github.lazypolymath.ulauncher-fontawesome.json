@@ -1,0 +1,11 @@
+{
+    "preferences": {
+        "copy_format": "svg",
+        "icon_color": "#7dcfff"
+    },
+    "triggers": {
+        "fa_kw": {
+            "keyword": "fa"
+        }
+    }
+}

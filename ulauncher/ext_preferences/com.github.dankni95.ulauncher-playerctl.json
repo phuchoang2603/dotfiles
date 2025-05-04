@@ -1,0 +1,11 @@
+{
+    "preferences": {
+        "change_icon_theme": "true",
+        "player_volume": "false"
+    },
+    "triggers": {
+        "playerctl": {
+            "keyword": "m"
+        }
+    }
+}
