@@ -2,10 +2,6 @@ if command -v mise &> /dev/null; then
   eval "$(mise activate bash)"
 fi
 
-if command -v zoxide &> /dev/null; then
-  eval "$(zoxide init bash)"
-fi
-
 if command -v fzf &> /dev/null; then
   eval "$(fzf --bash)"
 fi
@@ -16,4 +12,10 @@ fi
 
 if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
   tmux new-session -A -s ${USER} >/dev/null 2>&1
+fi
+
+. "$HOME/.cargo/env"
+
+if command -v zoxide &> /dev/null; then
+  eval "$(zoxide init bash)"
 fi
