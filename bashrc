@@ -1,6 +1,6 @@
 source ~/.config/bash/shell
-source ~/.config/bash/aliases
 source ~/.config/bash/init
+source ~/.config/bash/aliases
 
 # Editor used by CLI
 export EDITOR="nvim"
