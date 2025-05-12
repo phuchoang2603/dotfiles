@@ -14,7 +14,7 @@ set +h
 export OMAKUB_PATH="/home/$USER/.local/share/omakub"
 
 # Fzf default command
-export FZF_DEFAULT_COMMAND='fd --type d --strip-cwd-prefix --exclude .git --exclude mnt'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --strip-cwd-prefix --exclude .git --exclude mnt'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Editor used by CLI
