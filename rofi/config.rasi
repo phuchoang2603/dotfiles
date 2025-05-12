@@ -1,8 +1,7 @@
 configuration {
-	modes: "window,windowcd,drun,run,ssh,keys,filebrowser,keys,combi,emoji";
+	modes: "window,drun,run,ssh,keys,filebrowser,keys,combi,emoji";
 	/*---------- Display setting ----------*/
 	display-window: "Windows";
-	display-windowcd: "Window CD";
 	display-run: "Run";
 	display-ssh: "SSH";
 	display-drun: "Apps";

@@ -55,7 +55,7 @@ while choice=$(printf "%s\n" "${entries[@]}" | $ROFI $rofi_flags -dmenu -i -p "N
   "Previous") playerctl previous ;;
   "Loop") set_loop_mode ;;
   "Shuffle") set_shuffle_mode ;;
-  "Switch Player") playerctld shift ;;
+  "Switch Player") playerctld daemon && playerctld shift ;;
   esac
   sleep 0.1
 done

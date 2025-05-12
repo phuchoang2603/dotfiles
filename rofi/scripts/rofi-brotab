@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+# Unified brotab controller with back navigation
+
+ROFI="${ROFI:-rofi}"
+rofi_flags="-normal-window"
+
+# Ensure brotab is installed
+if ! command -v bt &>/dev/null; then
+  $ROFI -e "Install brotab (bt) to use this menu"
+  exit 1
+fi
+
+# Get all tabs into arrays
+tab_list=()
+tab_ids=()
+
+while IFS=$'\t' read -r id title url; do
+  domain=$(echo "$url" | sed -E 's|https?://(www\.)?||; s|/.*||')
+  tab_list+=("$title - $domain")
+  tab_ids+=("$id")
+done < <(bt list)
+
+# Helper to match tab name to ID
+get_tab_id() {
+  local tab="$1"
+  for i in "${!tab_list[@]}"; do
+    [[ "$tab" == "${tab_list[$i]}" ]] && echo "${tab_ids[$i]}" && return
+  done
+}
+
+# Main loop
+while true; do
+  selected_tab=$(printf "%s\n" "${tab_list[@]}" | $ROFI $rofi_flags -dmenu -i -p "Select Tab")
+
+  [ -z "$selected_tab" ] && exit 0
+
+  tab_id=$(get_tab_id "$selected_tab")
+
+  while true; do
+    action=$(printf "Activate\nClose\nGo Back" | $ROFI $rofi_flags -dmenu -i -p "Action on tab")
+
+    case "$action" in
+    "Activate")
+      bt activate "$tab_id"
+      exit 0
+      ;;
+    "Close")
+      bt close "$tab_id"
+      exit 0
+      ;;
+    "Go Back") break ;;
+    *) exit 1 ;;
+    esac
+  done
+done
+
+exit 0
