@@ -13,6 +13,9 @@ set +h
 
 export OMAKUB_PATH="/home/$USER/.local/share/omakub"
 
+# KUBECTL
+export KUBECONFIG=$(find ~/.kube \( -name '*.yaml' -o -name '*.yml' \) -print0 | xargs -0 echo | tr ' ' ':')
+
 # Fzf default command
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --strip-cwd-prefix --exclude .git --exclude mnt'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

@@ -20,6 +20,9 @@ alias d='docker'
 alias cat='bat'
 alias lzg='lazygit'
 alias lzd='lazydocker'
+alias k='kubectl'
+alias kx='kubectx'
+alias kn='kubens'
 
 # Git
 alias gcm='git commit -m'
