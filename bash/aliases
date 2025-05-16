@@ -20,14 +20,20 @@ alias d='docker'
 alias cat='bat'
 alias lzg='lazygit'
 alias lzd='lazydocker'
-alias k='kubectl'
 alias kx='kubectx'
 alias kn='kubens'
+alias h='helm'
 
 # Git
 alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias gcad='git commit -a --amend'
+
+complete -F _complete_alias "${!BASH_ALIASES[@]}"
+# Special case for kubectl
+source <(kubectl completion bash)
+alias k='kubectl'
+complete -F _complete_alias k
 
 # Compression
 compress() { tar -czf "${1%/}.tar.gz" "${1%/}"; }

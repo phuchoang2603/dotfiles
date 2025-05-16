@@ -68,5 +68,7 @@ done
 cp ~/.config/bashrc ~/.bashrc
 [ -f "~/.inputrc" ] && mv ~/.inputrc ~/.inputrc.bak
 cp ~/.config/inputrc ~/.inputrc
+[ -f "~/.bash_completion" ] && mv ~/.bash_completion ~/.bash_completion.bak
+cp ~/.config/bash_completion ~/.bash_completion
 
 echo "✅ Done."
