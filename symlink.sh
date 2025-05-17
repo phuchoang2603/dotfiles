@@ -4,6 +4,8 @@
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONFIG_TARGET="$HOME/.config"
 
+mkdir -p "$CONFIG_TARGET"
+
 # Files or directories to copy (only their contents)
 COPY_ITEMS=(
   "autostart"
