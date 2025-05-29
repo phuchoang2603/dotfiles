@@ -1,10 +1,7 @@
 # File system
 alias ls='eza -lh --group-directories-first --icons=auto'
-alias lsa='ls -a'
 alias lt='eza --tree --level=2 --long --icons --git'
-alias lta='lt -a'
 alias ff="fzf --preview 'batcat --style=numbers --color=always {}'"
-alias cd='z'
 alias copy='rclone copy --progress --multi-thread-streams=32'
 [[ "$TERM" == "xterm-kitty" ]] && alias ssh="TERM=xterm-256color ssh"
 
@@ -29,6 +26,7 @@ alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias gcad='git commit -a --amend'
 
+# Auto-completion for aliases
 complete -F _complete_alias "${!BASH_ALIASES[@]}"
 # Special case for kubectl
 source <(kubectl completion bash)
