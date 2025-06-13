@@ -19,14 +19,9 @@
     "markdown": true,
     "scminput": false
   },
-  "security.allowedUNCHosts": [
-    "wsl.localhost",
-    "casa.home.phuchoang.sbs",
-    "192.168.69.121"
-  ],
+  "security.allowedUNCHosts": ["wsl.localhost"],
   "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
   "remote.SSH.remotePlatform": {
-    "192.168.69.121": "linux",
     "docker": "linux",
     "docker2": "linux",
     "docker3": "linux"
@@ -55,7 +50,6 @@
   "github.copilot.chat.generateTests.codeLens": true,
   "terminal.integrated.tabs.defaultColor": "terminal.ansiBlue",
   "terminal.integrated.suggest.enabled": true,
-  "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
   "notebook.lineNumbers": "on",
   "vim.handleKeys": {
     "<C-p>": false,
