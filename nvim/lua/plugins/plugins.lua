@@ -133,17 +133,9 @@ return {
       },
     },
   },
-  -- blink
+  -- mini.pairs
   {
-    "saghen/blink.cmp",
-    opts = {
-      completion = {
-        accept = {
-          auto_brackets = {
-            enabled = false,
-          },
-        },
-      },
-    },
+    "echasnovski/mini.pairs",
+    enabled = false,
   },
 }
