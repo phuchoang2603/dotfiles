@@ -24,11 +24,6 @@ EXCLUDE_ITEMS=(
   "${COPY_ITEMS[@]}"
 )
 
-# Enable dry-run if argument or env var is set
-DRY_RUN="${DRY_RUN:-false}"
-[[ "$1" == "--dry-run" ]] && DRY_RUN=true
-[[ "$DRY_RUN" == "true" ]] && echo "🔍 Dry run enabled — no files will be modified."
-
 echo "🔗 Creating symlinks..."
 
 for item in "$DOTFILES_DIR"/* "$DOTFILES_DIR"/.*; do
@@ -44,8 +39,7 @@ for item in "$DOTFILES_DIR"/* "$DOTFILES_DIR"/.*; do
   dest="$CONFIG_TARGET/$basename_item"
 
   echo "→ Symlink: $basename_item"
-  $DRY_RUN || rm -rf "$dest"
-  $DRY_RUN || ln -s "$src" "$dest"
+  rm -rf "$dest" && ln -s "$src" "$dest"
 done
 
 echo "📄 Copying contents into folders..."
@@ -55,14 +49,13 @@ for item in "${COPY_ITEMS[@]}"; do
   dest="$CONFIG_TARGET/$item"
 
   echo "→ Copy contents of: $item"
-  $DRY_RUN || mkdir -p "$dest"
+  mkdir -p "$dest"
 
   for f in "$src"/*; do
     [[ -e "$f" ]] || continue # skip if empty
     fname=$(basename "$f")
     echo "   ↪ $fname"
-    $DRY_RUN || rm -rf "$dest/$fname"
-    $DRY_RUN || cp -r "$f" "$dest/"
+    rm -rf "$dest/$fname" && cp -r "$f" "$dest/"
   done
 done
 
