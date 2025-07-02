@@ -1,0 +1,29 @@
+# Session
+export XDG_CURRENT_DESKTOP=Hyprland
+export XDG_SESSION_TYPE=wayland
+export XDG_SESSION_DESKTOP=Hyprland
+
+# Toolkits (GTK, QT, etc.) & Wayland Compatibility
+export GDK_BACKEND="wayland,*"
+export GDK_SCALE=2
+export QT_QPA_PLATFORM="wayland;xcb"
+export QT_STYLE_OVERRIDE=kvantum
+export CLUTTER_BACKEND=wayland
+export SDL_VIDEODRIVER=wayland
+export MOZ_ENABLE_WAYLAND=1
+export OZONE_PLATFORM=wayland
+export ELECTRON_OZONE_PLATFORM_HINT=wayland
+
+# Input Method
+export QT_IM_MODULE=fcitx5
+export GTK_IM_MODULE=fcitx5
+export XMODIFIERS="@im=fcitx5"
+
+# Cursor
+export XCURSOR_SIZE=24
+export HYPRCURSOR_SIZE=24
+
+# Paths
+export XDG_DATA_DIRS="/usr/share:/usr/local/share:~/.local/share"
+export PATH="./bin:$HOME/.local/bin:$HOME/.local/share/omakub/bin:$PATH"
+export XDG_PICTURES_DIR="$HOME/Pictures/Screenshots/"
