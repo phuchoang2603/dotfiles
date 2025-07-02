@@ -59,14 +59,14 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "nospacing": 1,
-    "on-click": "kitty -e rofi-wifi",
+    "on-click": "rofi-wifi",
   },
   "bluetooth": {
     "format": "",
     "format-disabled": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "GTK_THEME=Adwaita-dark blueberry",
+    "on-click": "rofi-bluetooth",
   },
   "pulseaudio": {
     "format": "",
