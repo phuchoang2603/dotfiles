@@ -1,281 +1,38 @@
-/*
- * __        __          _                  ____  _         _
- * \ \      / /_ _ _   _| |__   __ _ _ __  / ___|| |_ _   _| | ___
- *  \ \ /\ / / _` | | | | '_ \ / _` | '__| \___ \| __| | | | |/ _ \
- *   \ V  V / (_| | |_| | |_) | (_| | |     ___) | |_| |_| | |  __/
- *    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    |____/ \__|\__, |_|\___|
- *                 |___/                              |___/
- *
- * by Stephan Raabe (2023)
- * -----------------------------------------------------
-*/
-
-/* -----------------------------------------------------
- * Import Pywal colors
- * ----------------------------------------------------- */
-/* @import 'style-light.css'; */
-@define-color backgroundlight #FFFFFF;
-@define-color backgrounddark #FFFFFF;
-@define-color workspacesbackground1 #FFFFFF;
-@define-color workspacesbackground2 #CCCCCC;
-@define-color bordercolor #FFFFFF;
-@define-color textcolor1 #000000;
-@define-color textcolor2 #000000;
-@define-color textcolor3 #FFFFFF;
-@define-color iconcolor #FFFFFF;
-
-/* -----------------------------------------------------
- * General
- * ----------------------------------------------------- */
-
 * {
-  font-family:
-    "CaskaydiaMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
+  min-height: 0;
+  font-family: CaskaydiaMono Nerd Font;
+  font-size: 12px;
 }
-
-window#waybar {
-  background-color: rgba(0, 0, 0, 0.4);
-  border-bottom: 0px solid #ffffff;
-  /* color: #FFFFFF; */
-  transition-property: background-color;
-  transition-duration: 0.5s;
-}
-
-.modules-left {
-  padding-left: 10px;
-}
-
-/* -----------------------------------------------------
- * Workspaces
- * ----------------------------------------------------- */
 
 #workspaces {
-  margin: 3px 7px 3px 3px;
-  border: 0px;
-  font-size: 14px;
-  color: @textcolor1;
+  margin-left: 7px;
 }
 
 #workspaces button {
-  border: 0px;
-  margin: 4px 5px 4px 0px;
-  padding: 0px 4px 0px 4px;
-  color: @textcolor3;
-  transition: all 0.5s ease-in-out;
+  all: initial;
+  padding: 2px 6px;
+  margin-right: 3px;
 }
 
-#workspaces button.active {
-  color: @textcolor1;
-  background: @workspacesbackground2;
+#clock,
+#cpu,
+#memory,
+#network,
+#bluetooth,
+#pulseaudio,
+#battery {
+  min-width: 12px;
+  margin-right: 13px;
 }
-
-#workspaces button:hover {
-  color: @textcolor1;
-  background: @workspacesbackground2;
-  border-radius: 15px;
-}
-
-/* -----------------------------------------------------
- * Tooltips
- * ----------------------------------------------------- */
 
 tooltip {
-  border-radius: 16px;
-  background-color: @backgroundlight;
-  opacity: 0.9;
-  padding: 20px;
-  margin: 0px;
+  padding: 2px;
 }
 
 tooltip label {
-  color: @textcolor2;
+  padding: 2px;
 }
 
-/* -----------------------------------------------------
- * Window
- * ----------------------------------------------------- */
-
-#window {
-  margin: 0px 15px 0px 0px;
-  border-radius: 12px;
-  color: @textcolor;
-  font-size: 14px;
-  font-weight: normal;
-}
-
-window#waybar.empty #window {
-  background-color: transparent;
-}
-
-/* -----------------------------------------------------
- * Modules
- * ----------------------------------------------------- */
-
-.modules-left > widget:first-child > #workspaces {
-  margin-left: 0;
-}
-
-.modules-right > widget:last-child > #workspaces {
-  margin-right: 0;
-}
-
-/* -----------------------------------------------------
- * Custom Notification
- * ----------------------------------------------------- */
-
-#custom-notification {
-  margin: 0px 13px 0px 0px;
-  padding: 0px;
-  font-size: 20px;
-  color: @iconcolor;
-  opacity: 0.8;
-}
-
-/* -----------------------------------------------------
- * Custom Exit
- * ----------------------------------------------------- */
-
-#custom-exit {
-  margin: 0px 20px 0px 0px;
-  padding: 0px;
-  font-size: 16px;
-  color: @iconcolor;
-}
-
-/* -----------------------------------------------------
- * Hardware Group
- * ----------------------------------------------------- */
-
-#disk,
-#memory,
-#cpu,
-#language {
-  margin: 0px;
-  padding: 0px;
-  font-size: 14px;
-  color: @iconcolor;
-}
-
-#language {
-  margin-right: 10px;
-}
-
-/* -----------------------------------------------------
- * Power Profiles Daemon
- * ----------------------------------------------------- */
-
-#power-profiles-daemon {
-  margin: 0px 13px 0px 0px;
-  padding: 0px;
-  font-size: 14px;
-  color: @iconcolor;
-}
-
-/* -----------------------------------------------------
- * Clock
- * ----------------------------------------------------- */
-
-#clock {
-  font-size: 15px;
-  color: @textcolor;
-  margin: 0px 15px 0px 0px;
-}
-
-/* -----------------------------------------------------
- * Backlight
- * ----------------------------------------------------- */
-
-#backlight {
-  font-size: 14px;
-  color: @textcolor;
-  border-radius: 15px;
-  margin: 0px 15px 0px 0px;
-  background-color: transparent;
-}
-
-/* -----------------------------------------------------
- * Pulseaudio
- * ----------------------------------------------------- */
-
-#pulseaudio {
-  font-size: 14px;
-  color: @textcolor;
-  border-radius: 15px;
-  margin: 0px 15px 0px 0px;
-}
-
-#pulseaudio.muted {
-  color: @textcolor;
-}
-
-/* -----------------------------------------------------
- * Network
- * ----------------------------------------------------- */
-
-#network {
-  font-size: 14px;
-  color: @textcolor;
-  border-radius: 15px;
-  margin: 0px 15px 0px 0px;
-}
-
-#network.ethernet {
-  color: @textcolor;
-}
-
-#network.wifi {
-  color: @textcolor;
-}
-
-/* -----------------------------------------------------
- * Bluetooth
- * ----------------------------------------------------- */
-
-#bluetooth,
-#bluetooth.on,
-#bluetooth.connected {
-  font-size: 14px;
-  color: @textcolor;
-  border-radius: 15px;
-  margin: 10px 15px 10px 0px;
-}
-
-#bluetooth.off {
-  background-color: transparent;
-  padding: 0px;
-  margin: 0px;
-}
-
-/* -----------------------------------------------------
- * Battery
- * ----------------------------------------------------- */
-
-#battery {
-  font-size: 14px;
-  color: @textcolor;
-  border-radius: 15px;
-  margin: 10px 15px 10px 0px;
-}
-
-#battery.charging,
-#battery.plugged {
-  color: @textcolor;
-}
-
-@keyframes blink {
-  to {
-    background-color: @backgroundlight;
-    color: @textcolor2;
-  }
-}
-
-#battery.critical:not(.charging) {
-  color: #f53c3c;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
+@import "../omarchy/current/theme/waybar.css";
