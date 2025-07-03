@@ -8,22 +8,24 @@
 }
 
 window#waybar {
-  border-radius: 12px;
+  background: transparent;
+  border: 0px;
 }
 
 #workspaces {
-  margin: 8px;
-  border-radius: 4px;
+  margin: 4px;
+  border-radius: 12px;
 }
 
 #workspaces button {
   all: initial;
   min-width: 0;
-  padding: 0px 4px;
-  border-radius: 4px;
+  padding: 4px 4px;
+  border-radius: 12px;
   margin-right: 4px;
 }
 
+#tray,
 #clock,
 #cpu,
 #memory,
@@ -31,9 +33,9 @@ window#waybar {
 #bluetooth,
 #pulseaudio,
 #battery {
-  margin: 8px;
-  padding: 0px 8px;
-  border-radius: 4px;
+  margin: 4px;
+  padding: 4px 8px;
+  border-radius: 12px;
 }
 
 tooltip {

@@ -1,28 +1,24 @@
-window#waybar {
-  background: #181824;
-  border: 2px solid #cba6f7;
-}
-
 tooltip {
-  background-color: #181824;
-  border: 2px solid #cba6f7;
+  background-color: #282828;
+  border: 1px solid #d4be98;
 }
 
 tooltip label {
-  color: #cba6f7;
+  color: #d4be98;
 }
 
 #workspaces button {
-  color: #cba6f7;
-  background-color: #181824;
-  border: 2px solid #cba6f7;
+  color: #d4be98;
+  background-color: #282828;
+  border: 1px solid #d4be98;
 }
 
 #workspaces button.active {
-  color: #181824;
-  background-color: #cba6f7;
+  color: #282828;
+  background-color: #d4be98;
 }
 
+#tray,
 #clock,
 #cpu,
 #memory,
@@ -30,7 +26,7 @@ tooltip label {
 #bluetooth,
 #pulseaudio,
 #battery {
-  background-color: #181824;
-  border: 2px solid #cba6f7;
-  color: #cba6f7;
+  background-color: #282828;
+  border: 1px solid #d4be98;
+  color: #d4be98;
 }
