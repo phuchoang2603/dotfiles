@@ -8,7 +8,7 @@
 
   "output": "eDP-1",
 
-  "modules-left": ["clock", "tray"],
+  "modules-left": ["clock", "tray", "custom/docker"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
     "cpu",
@@ -24,12 +24,21 @@
     "tooltip": false,
   },
   "clock": {
-    "format": "{:%H:%M - %a, %d %b %Y}",
-    "tooltip": false,
+    "format": " {:%H:%M - %a, %b %d}",
+    "tooltip": true,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
   },
   "tray": {
     "spacing": 8,
     "tooltip": false,
+  },
+  "custom/docker": {
+    "format": "🐳 {}",
+    "return-type": "json",
+    "exec": "waybar-docker.sh",
+    "interval": 15,
+    "tooltip": true,
+    "on-click": "kitty -e lazydocker",
   },
   "cpu": {
     "format": "󰍛 {avg_frequency}GHz",
@@ -63,7 +72,7 @@
   },
   "pulseaudio": {
     "format": " {volume}%",
-    "format-muted": "󰝟",
+    "format-muted": "󰝟 muted",
     "scroll-step": 5,
     "on-click": "GTK_THEME=Adwaita-dark pavucontrol",
     "tooltip-format": "Playing at {volume}%",

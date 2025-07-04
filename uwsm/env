@@ -16,7 +16,7 @@ export ELECTRON_OZONE_PLATFORM_HINT=wayland
 
 # Input Method
 export QT_IM_MODULE=fcitx5
-export GTK_IM_MODULE=fcitx5
+# export GTK_IM_MODULE=fcitx5
 export XMODIFIERS="@im=fcitx5"
 
 # Cursor

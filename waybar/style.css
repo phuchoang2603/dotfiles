@@ -20,13 +20,14 @@ window#waybar {
 #workspaces button {
   all: initial;
   min-width: 0;
-  padding: 4px 4px;
+  padding: 4px 8px;
   border-radius: 12px;
   margin-right: 4px;
 }
 
-#tray,
 #clock,
+#tray,
+#custom-docker,
 #cpu,
 #memory,
 #network,

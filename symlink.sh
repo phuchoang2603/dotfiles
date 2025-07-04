@@ -8,7 +8,6 @@ mkdir -p "$CONFIG_TARGET"
 
 # Files or directories to copy (only their contents)
 COPY_ITEMS=(
-  "autostart"
   "fcitx5"
   "filecxx"
   "rclone"

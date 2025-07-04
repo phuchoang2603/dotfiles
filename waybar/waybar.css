@@ -1,32 +1,33 @@
 tooltip {
-  background-color: #282828;
-  border: 1px solid #d4be98;
+  background-color: #3b4252;
+  border: 1px solid #88c0d0;
 }
 
 tooltip label {
-  color: #d4be98;
+  color: #88c0d0;
 }
 
 #workspaces button {
-  color: #d4be98;
-  background-color: #282828;
-  border: 1px solid #d4be98;
+  color: #88c0d0;
+  background-color: #3b4252;
+  border: 1px solid #88c0d0;
 }
 
 #workspaces button.active {
-  color: #282828;
-  background-color: #d4be98;
+  color: #3b4252;
+  background-color: #88c0d0;
 }
 
-#tray,
 #clock,
+#tray,
+#custom-docker,
 #cpu,
 #memory,
 #network,
 #bluetooth,
 #pulseaudio,
 #battery {
-  background-color: #282828;
-  border: 1px solid #d4be98;
-  color: #d4be98;
+  background-color: #3b4252;
+  border: 1px solid #88c0d0;
+  color: #88c0d0;
 }
