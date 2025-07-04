@@ -1,21 +1,21 @@
 tooltip {
-  background-color: #3b4252;
-  border: 1px solid #88c0d0;
+  background-color: #181824;
+  border: 1px solid #cba6f7;
 }
 
 tooltip label {
-  color: #88c0d0;
+  color: #cba6f7;
 }
 
 #workspaces button {
-  color: #88c0d0;
-  background-color: #3b4252;
-  border: 1px solid #88c0d0;
+  color: #cba6f7;
+  background-color: #181824;
+  border: 1px solid #cba6f7;
 }
 
 #workspaces button.active {
-  color: #3b4252;
-  background-color: #88c0d0;
+  color: #181824;
+  background-color: #cba6f7;
 }
 
 #clock,
@@ -27,7 +27,7 @@ tooltip label {
 #bluetooth,
 #pulseaudio,
 #battery {
-  background-color: #3b4252;
-  border: 1px solid #88c0d0;
-  color: #88c0d0;
+  background-color: #181824;
+  border: 1px solid #cba6f7;
+  color: #cba6f7;
 }
