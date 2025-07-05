@@ -1,3 +1,5 @@
+@import "./waybar.css";
+
 * {
   border: none;
   min-height: 0;
@@ -18,14 +20,23 @@ window#waybar {
 }
 
 #workspaces button {
-  all: initial;
+  color: @primary;
+  background-color: @text;
+  border: 1px solid @primary;
   min-width: 0;
-  padding: 4px 16px;
+  padding: 4px 8px;
   border-radius: 12px;
   margin-right: 4px;
 }
 
+#workspaces button.active {
+  color: @text;
+  background-color: @primary;
+  padding: 4px 36px;
+}
+
 #clock,
+#mpris,
 #tray,
 #custom-docker,
 #cpu,
@@ -34,17 +45,21 @@ window#waybar {
 #bluetooth,
 #pulseaudio,
 #battery {
+  background-color: @text;
+  border: 1px solid @primary;
+  color: @primary;
   margin: 4px;
   padding: 4px 8px;
   border-radius: 12px;
 }
 
 tooltip {
+  background-color: @text;
+  border: 1px solid @primary;
   padding: 2px;
 }
 
 tooltip label {
+  color: @primary;
   padding: 2px;
 }
-
-@import "./waybar.css";

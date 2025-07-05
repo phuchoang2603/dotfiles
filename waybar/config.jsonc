@@ -8,7 +8,7 @@
 
   "output": "eDP-1",
 
-  "modules-left": ["clock", "tray", "custom/docker"],
+  "modules-left": ["clock", "mpris", "tray", "custom/docker"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
     "cpu",
@@ -27,6 +27,21 @@
     "format": " {:%H:%M - %a, %b %d}",
     "tooltip": true,
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
+  },
+  "mpris": {
+    "format": "{status_icon} {dynamic}",
+    "dynamic-len": 20,
+    "dynamic-separator": " - ",
+    "dynamic-order": ["title", "artist", "album"],
+    "dynamic-importance-order": ["title", "artist", "album"],
+    "status-icons": {
+      "playing": "",
+      "paused": "",
+      "stopped": "",
+    },
+    "on-click": "playerctl play-pause",
+    "ignored-players": ["firefox"],
+    "enable-tooltip-len-limits": true,
   },
   "tray": {
     "spacing": 8,
