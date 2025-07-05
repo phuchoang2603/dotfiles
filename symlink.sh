@@ -9,7 +9,6 @@ mkdir -p "$CONFIG_TARGET"
 # Files or directories to copy (only their contents)
 COPY_ITEMS=(
   "rclone"
-  "Code"
 )
 
 # Items to exclude from symlinking

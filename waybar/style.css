@@ -20,9 +20,9 @@ window#waybar {
 }
 
 #workspaces button {
-  color: @primary;
-  background-color: @text;
-  border: 1px solid @primary;
+  color: @color1;
+  background-color: @color0;
+  border: 1px solid @color1;
   min-width: 0;
   padding: 4px 8px;
   border-radius: 12px;
@@ -30,8 +30,8 @@ window#waybar {
 }
 
 #workspaces button.active {
-  color: @text;
-  background-color: @primary;
+  color: @color0;
+  background-color: @color1;
   padding: 4px 36px;
 }
 
@@ -45,21 +45,21 @@ window#waybar {
 #bluetooth,
 #pulseaudio,
 #battery {
-  background-color: @text;
-  border: 1px solid @primary;
-  color: @primary;
+  background-color: @color0;
+  border: 1px solid @color1;
+  color: @color1;
   margin: 4px;
   padding: 4px 8px;
   border-radius: 12px;
 }
 
 tooltip {
-  background-color: @text;
-  border: 1px solid @primary;
+  background-color: @color0;
+  border: 1px solid @color1;
   padding: 2px;
 }
 
 tooltip label {
-  color: @primary;
+  color: @color1;
   padding: 2px;
 }
