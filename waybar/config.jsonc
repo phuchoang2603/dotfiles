@@ -8,7 +8,13 @@
 
   "output": "eDP-1",
 
-  "modules-left": ["clock", "mpris", "tray", "custom/docker"],
+  "modules-left": [
+    "custom/launcher",
+    "clock",
+    "mpris",
+    "tray",
+    "custom/docker",
+  ],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
     "cpu",
@@ -18,6 +24,10 @@
     "pulseaudio",
     "battery",
   ],
+  "custom/launcher": {
+    "format": " ",
+    "on-click": "rofi -show combi -normal-window",
+  },
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,

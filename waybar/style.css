@@ -1,12 +1,9 @@
 @import "./waybar.css";
 
 * {
-  border: none;
-  min-height: 0;
   font-family: CaskaydiaMono Nerd Font;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 14px;
-  padding: 0;
 }
 
 window#waybar {
@@ -14,31 +11,12 @@ window#waybar {
   border: 0px;
 }
 
-#workspaces {
-  margin: 4px;
-  border-radius: 12px;
-}
-
-#workspaces button {
-  color: @color1;
-  background-color: @color0;
-  border: 1px solid @color1;
-  min-width: 0;
-  padding: 4px 8px;
-  border-radius: 12px;
-  margin-right: 4px;
-}
-
-#workspaces button.active {
-  color: @color0;
-  background-color: @color1;
-  padding: 4px 36px;
-}
-
+#custom-launcher,
 #clock,
 #mpris,
 #tray,
 #custom-docker,
+#workspaces button,
 #cpu,
 #memory,
 #network,
@@ -51,6 +29,18 @@ window#waybar {
   margin: 4px;
   padding: 4px 8px;
   border-radius: 12px;
+}
+
+#clock,
+#network,
+#workspaces button.active {
+  background-color: @color1;
+  border: 1px solid @color0;
+  color: @color0;
+}
+
+#workspaces button.active {
+  padding: 4px 36px;
 }
 
 tooltip {
