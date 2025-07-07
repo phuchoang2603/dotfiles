@@ -12,10 +12,10 @@ window#waybar {
 }
 
 #custom-launcher,
-#clock,
-#mpris,
 #tray,
 #custom-docker,
+#clock,
+#mpris,
 #workspaces button,
 #cpu,
 #memory,

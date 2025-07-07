@@ -10,10 +10,10 @@
 
   "modules-left": [
     "custom/launcher",
-    "clock",
-    "mpris",
     "tray",
     "custom/docker",
+    "clock",
+    "mpris",
   ],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
