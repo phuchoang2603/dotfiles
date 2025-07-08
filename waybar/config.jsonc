@@ -24,14 +24,10 @@
     "pulseaudio",
     "battery",
   ],
+
   "custom/launcher": {
     "format": " ",
     "on-click": "rofi -show combi -normal-window",
-  },
-  "hyprland/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
-    "tooltip": false,
   },
   "clock": {
     "format": " {:%H:%M - %a, %b %d}",
@@ -65,6 +61,13 @@
     "tooltip": true,
     "on-click": "kitty -e lazydocker",
   },
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "tooltip": false,
+  },
+
   "cpu": {
     "format": "󰍛 {avg_frequency}GHz",
     "interval": 5,
