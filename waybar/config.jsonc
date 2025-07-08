@@ -99,7 +99,7 @@
     "format": " {volume}%",
     "format-muted": "󰝟 muted",
     "scroll-step": 5,
-    "on-click": "GTK_THEME=Adwaita-dark pavucontrol",
+    "on-click": "pavucontrol",
     "tooltip-format": "Playing at {volume}%",
     "ignored-sinks": ["Easy Effects Sink"],
   },
