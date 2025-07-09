@@ -28,10 +28,6 @@ alias gcad='git commit -a --amend'
 
 # Auto-completion for aliases
 complete -F _complete_alias "${!BASH_ALIASES[@]}"
-# Special case for kubectl
-source <(kubectl completion bash)
-alias k='kubectl'
-complete -F _complete_alias k
 
 # Compression
 compress() { tar -czf "${1%/}.tar.gz" "${1%/}"; }

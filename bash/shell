@@ -13,8 +13,13 @@ set +h
 
 export OMAKUB_PATH="/home/$USER/.local/share/omakub"
 
-# KUBECTL
-export KUBECONFIG=$(find ~/.kube \( -name '*.yaml' -o -name '*.yml' \) -print0 | xargs -0 echo | tr ' ' ':')
+# Kubeconfig and kubectl completion (if kubectl is installed)
+if command -v kubectl &> /dev/null; then
+    export KUBECONFIG=$(find ~/.kube \( -name '*.yaml' -o -name '*.yml' \) -print0 | xargs -0 echo | tr ' ' ':')
+    source <(kubectl completion bash)
+    alias k='kubectl'
+    complete -F _complete_alias k
+fi
 
 # Fzf default command
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --strip-cwd-prefix --exclude .git --exclude mnt'
