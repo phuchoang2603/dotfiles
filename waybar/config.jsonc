@@ -45,8 +45,8 @@
       "paused": "",
       "stopped": "",
     },
-    "on-click": "playerctl play-pause",
-    "ignored-players": ["firefox"],
+    "player": "spotify",
+    "on-click": "playerctl play-pause --player=spotify",
     "enable-tooltip-len-limits": true,
   },
   "tray": {
