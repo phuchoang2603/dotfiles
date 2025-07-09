@@ -9,6 +9,7 @@ mkdir -p "$CONFIG_TARGET"
 # Files or directories to copy (only their contents)
 COPY_ITEMS=(
   "rclone"
+  "obs-studio"
 )
 
 # Items to exclude from symlinking
