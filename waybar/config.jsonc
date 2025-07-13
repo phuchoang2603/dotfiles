@@ -75,11 +75,13 @@
       "critical": 60,
     },
     "tooltip": true,
+    "on-click": "gnome-system-monitor",
   },
   "memory": {
     "format": "  {used:0.1f}GB",
     "interval": 15,
     "tooltip": true,
+    "on-click": "gnome-system-monitor",
   },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
@@ -91,7 +93,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "nospacing": 1,
-    "on-click": "rofi-wifi",
+    "on-click": "kitty -e nmtui",
   },
   "bluetooth": {
     "tooltip-format": "Devices connected: {num_connections}",
