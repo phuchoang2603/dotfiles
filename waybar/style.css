@@ -11,9 +11,9 @@ window#waybar {
   border: 0px;
 }
 
-#custom-launcher,
 #tray,
 #custom-docker,
+#custom-todoist,
 #clock,
 #mpris,
 #workspaces button,

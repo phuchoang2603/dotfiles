@@ -8,15 +8,10 @@
 
   "output": "eDP-1",
 
-  "modules-left": [
-    "custom/launcher",
-    "tray",
-    "custom/docker",
-    "clock",
-    "mpris",
-  ],
+  "modules-left": ["mpris", "custom/docker", "clock", "custom/todoist"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
+    "tray",
     "cpu",
     "memory",
     "network",
@@ -25,14 +20,11 @@
     "battery",
   ],
 
-  "custom/launcher": {
-    "format": " ",
-    "on-click": "rofi -show combi -normal-window",
-  },
   "clock": {
     "format": " {:%H:%M - %a, %b %d}",
     "tooltip": true,
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "on-click": "gnome-calendar",
   },
   "mpris": {
     "format": "{status_icon} {dynamic}",
@@ -60,6 +52,13 @@
     "interval": 15,
     "tooltip": true,
     "on-click": "kitty -e lazydocker",
+  },
+  "custom/todoist": {
+    "format": " {}",
+    "return-type": "json",
+    "exec": "waybar-todoist.sh",
+    "interval": 60,
+    "tooltip": true,
   },
 
   "hyprland/workspaces": {
