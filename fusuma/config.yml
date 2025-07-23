@@ -1,9 +1,4 @@
 swipe:
-  2:
-    left:
-      sendkey: "LEFTALT+RIGHT"
-    right:
-      sendkey: "LEFTALT+LEFT"
   3:
     left:
       sendkey: "LEFTCTRL+PAGEUP" # History back

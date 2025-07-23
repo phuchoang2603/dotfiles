@@ -1,0 +1,36 @@
+[Default Applications]
+x-scheme-handler/http=microsoft-edge-beta.desktop;
+x-scheme-handler/https=microsoft-edge-beta.desktop;
+x-scheme-handler/chrome=microsoft-edge-beta.desktop;
+text/html=microsoft-edge-beta.desktop;
+application/x-extension-htm=microsoft-edge-beta.desktop;
+application/x-extension-html=microsoft-edge-beta.desktop;
+application/x-extension-shtml=microsoft-edge-beta.desktop;
+application/xhtml+xml=microsoft-edge-beta.desktop;
+application/x-extension-xhtml=microsoft-edge-beta.desktop;
+application/x-extension-xht=microsoft-edge-beta.desktop;
+image/png=org.gnome.Loupe.desktop;
+application/pdf=microsoft-edge-beta.desktop;
+video/mp4=mpv.desktop;
+image/gif=org.gnome.Loupe.desktop;
+image/jpeg=org.gnome.Loupe.desktop;
+image/webp=org.gnome.Loupe.desktop;
+image/bmp=org.gnome.Loupe.desktop;
+image/tiff=org.gnome.Loupe.desktop;
+video/x-msvideo=mpv.desktop;
+video/x-matroska=mpv.desktop;
+video/x-flv=mpv.desktop;
+video/x-ms-wmv=mpv.desktop;
+video/mpeg=mpv.desktop;
+video/ogg=mpv.desktop;
+video/webm=mpv.desktop;
+video/quicktime=mpv.desktop;
+video/3gpp=mpv.desktop;
+video/3gpp2=mpv.desktop;
+video/x-ms-asf=mpv.desktop;
+video/x-ogm+ogg=mpv.desktop;
+video/x-theora+ogg=mpv.desktop;
+application/ogg=mpv.desktop;
+x-scheme-handler/about=microsoft-edge-beta.desktop;
+
+[Added Associations]

@@ -28,6 +28,5 @@ export XCURSOR_SIZE=24
 export HYPRCURSOR_SIZE=24
 
 # Paths
-export XDG_DATA_DIRS="/usr/share:/usr/local/share:~/.local/share"
 export PATH="./bin:$HOME/.local/bin:$HOME/.local/share/omakub/bin:$PATH"
 export XDG_PICTURES_DIR="$HOME/Pictures/Screenshots/"
