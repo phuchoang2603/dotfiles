@@ -2,6 +2,7 @@ add_newline = false
 
 [kubernetes]
 disabled = false
+symbol = ''
 
 [gcloud]
 disabled = true
