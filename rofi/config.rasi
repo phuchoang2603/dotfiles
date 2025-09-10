@@ -24,7 +24,7 @@ configuration {
   icon-theme: "Papirus";
   steal-focus: true;
   terminal: "kitty";
-  font: "CaskaydiaMono Nerd Font 10";
+  font: "CaskaydiaMono Nerd Font 8";
 	sort: false;
 	threads: 0;
 	click-to-exit: true;
