@@ -95,9 +95,12 @@
     "on-click": "kitty -e nmtui",
   },
   "bluetooth": {
-    "tooltip-format": "Devices connected: {num_connections}",
+    "format": " {status}",
+    "format-connected-battery": " {device_battery_percentage}%",
+    "tooltip-format": "{num_connections}",
+    "tooltip-format-enumerate-connected": "{device_alias}",
     "tooltip-format-connected-battery": "{device_alias} {device_battery_percentage}%",
-    "on-click": "rofi-bluetooth",
+    "on-click": "blueman-manager",
   },
   "pulseaudio": {
     "format": " {volume}%",
