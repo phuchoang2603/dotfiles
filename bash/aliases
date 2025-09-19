@@ -40,21 +40,12 @@ webm2mp4() {
   ffmpeg -i "$input_file" -c:v libx264 -preset slow -crf 22 -c:a aac -b:a 192k "$output_file"
 }
 
-# Convert jpg to png
-# Converts a JPG/JPEG file to a PNG file
-jpg2png() {
-  # Check if an input file was provided
-  if [ -z "$1" ]; then
-    echo "Usage: jpg2png <filename.jpg>"
-    return 1
-  fi
-
+# Convert any image file to png
+img2png() {
   local input_file="$1"
-  # Create the output filename by replacing the extension with .png
   local output_file="${input_file%.*}.png"
 
-  # Use the 'magick' command to perform the conversion
-  magick "$input_file" "$output_file" && echo "✅ Converted '$input_file' to '$output_file'"
+  magick "$input_file" "$output_file"
 }
 
 y() {
