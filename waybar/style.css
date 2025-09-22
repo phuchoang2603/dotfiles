@@ -32,7 +32,7 @@ window#waybar {
 }
 
 #clock,
-#network,
+#battery,
 #workspaces button.active {
   background-color: @color1;
   border: 1px solid @color0;

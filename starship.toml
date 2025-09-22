@@ -6,3 +6,6 @@ symbol = ''
 
 [gcloud]
 disabled = true
+
+[aws]
+disabled = true
