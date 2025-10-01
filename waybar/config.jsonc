@@ -20,13 +20,13 @@
   },
   "mpris": {
     "format": "{status_icon} {dynamic}",
-    "dynamic-len": 20,
+    "dynamic-len": 15,
     "dynamic-separator": " - ",
     "dynamic-order": ["title", "artist", "album"],
     "dynamic-importance-order": ["title", "artist", "album"],
     "status-icons": {
-      "playing": "",
-      "paused": "",
+      "playing": "",
+      "paused": "",
       "stopped": "",
     },
     "player": "spotify",
