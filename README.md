@@ -16,12 +16,4 @@ This repository contains my personal dotfiles setup.
    ./symlink.sh
    ```
 
-## Dry Run
-
-To preview the changes without applying them, use the `--dry-run` option:
-
-```bash
-./symlink.sh --dry-run
-```
-
 That's it! Your dotfiles are now set up.

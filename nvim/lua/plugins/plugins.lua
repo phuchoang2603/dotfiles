@@ -127,4 +127,11 @@ return {
     "nvim-mini/mini.pairs",
     enabled = true,
   },
+  -- gitignore.nvim
+  {
+    "wintermute-cell/gitignore.nvim",
+    config = function()
+      require("gitignore")
+    end,
+  },
 }
