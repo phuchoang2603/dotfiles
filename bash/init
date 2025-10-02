@@ -1,3 +1,6 @@
+# Autocompletion
+source /usr/share/bash-completion/bash_completion
+
 if command -v mise &> /dev/null; then
   eval "$(mise activate bash)"
 fi
@@ -5,6 +8,9 @@ fi
 if command -v fzf &> /dev/null; then
   eval "$(fzf --bash)"
 fi
+
+source fzf-bash-completion.sh
+bind -x '"\t": fzf_bash_completion'
 
 if command -v starship &> /dev/null; then
   eval "$(starship init bash)"
