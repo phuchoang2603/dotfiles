@@ -1,12 +1,47 @@
 $env.config = {
-  buffer_editor: "nvim",
-  edit_mode: vi,
-  show_banner: false,
-  use_kitty_protocol: true,
+  buffer_editor: "nvim"
+  edit_mode: vi
+  show_banner: false
+  use_kitty_protocol: true
   cursor_shape: {
-    vi_insert: line,
+    vi_insert: line
     vi_normal: block
   }
+
+  keybindings: [
+    {
+      name: move_one_word_right_or_take_history_hint_word
+      modifier: control
+      keycode: char_w
+      mode: [vi_normal, vi_insert]
+      event: {
+        until: [
+          { send: historyhintwordcomplete }
+          { edit: movewordright }
+        ]
+      }
+    }
+    {
+      name: delete_one_word_backward
+      modifier: control
+      keycode: char_b
+      mode: [vi_normal, vi_insert]
+      event: { edit: backspaceword }
+    }
+    {
+      name: move_to_line_end_or_take_history_hint
+      modifier: control
+      keycode: char_e
+      mode: [vi_normal, vi_insert]
+      event: {
+        until: [
+          { send: historyhintcomplete }
+          { edit: movetolineend }
+        ]
+      }
+    }
+  ]
+
 }
 
 # ALIAS
