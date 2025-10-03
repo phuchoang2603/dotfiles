@@ -1,9 +1,7 @@
-$env.config.buffer_editor = "nvim"
-$env.config.show_banner = false
-
-# Check if tmux exists, if we are in a graphical session, and not already in tmux
-if (which tmux) != null and ($env.DISPLAY? | default '') != '' and ($env.TMUX? | default '') == '' {
-    exec tmux new-session -A -s $env.USER &> /dev/null
+$env.config = {
+  "buffer_editor": "nvim",
+  "show_banner": false,
+  "use_kitty_protocol": true
 }
 
 # ALIAS

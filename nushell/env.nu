@@ -7,3 +7,4 @@ $env.PATH ++= [
 ]
 
 $env.OMAKUB_PATH = "~/.local/share/omakub"
+$env.KUBECONFIG = (glob '~/.kube/*.yml' | str join ':')
