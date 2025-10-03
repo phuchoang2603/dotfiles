@@ -1,7 +1,12 @@
 $env.config = {
-  "buffer_editor": "nvim",
-  "show_banner": false,
-  "use_kitty_protocol": true
+  buffer_editor: "nvim",
+  edit_mode: vi,
+  show_banner: false,
+  use_kitty_protocol: true,
+  cursor_shape: {
+    vi_insert: line,
+    vi_normal: block
+  }
 }
 
 # ALIAS
@@ -17,9 +22,11 @@ alias d = docker
 alias dcp = docker compose
 alias lzg = lazygit
 alias lzd = lazydocker
+
 alias kx = kubectx
 alias kn = kubens
 alias k = kubectl
+alias ka = kubectl get all
 alias h = helm
 
 # FUNCTIONS
@@ -57,4 +64,15 @@ def "nu-complete zoxide path" [context: string] {
 
 def --env --wrapped z [...rest: string@"nu-complete zoxide path"] {
   __zoxide_z ...$rest
+}
+
+# tmux
+def tn [] {
+    let session_name = ($env.PWD | path basename)
+
+    if ((tmux has-session -t $session_name | complete).exit_code == 0) {
+        tmux attach -t $session_name
+    } else {
+        tmux new -s $session_name
+    }
 }
