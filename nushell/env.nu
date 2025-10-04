@@ -8,6 +8,7 @@ $env.PATH ++= [
 
 $env.OMAKUB_PATH = "~/.local/share/omakub"
 $env.KUBECONFIG = (glob '~/.kube/*.yml' | str join ':')
+$env.EDITOR = "nvim"
 
 $env.PROMPT_INDICATOR_VI_NORMAL = ""
 $env.PROMPT_INDICATOR_VI_INSERT = ""
