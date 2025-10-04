@@ -1,31 +1,10 @@
-#     ____      ____
-#    / __/___  / __/
-#   / /_/_  / / /_
-#  / __/ / /_/ __/
-# /_/   /___/_/ key-bindings.nu
-#
-# - $FZF_TMUX_OPTS --
-# - $FZF_CTRL_T_COMMAND
-# - $FZF_CTRL_T_OPTS
-# - $FZF_CTRL_R_OPTS ---
-# - $FZF_ALT_C_COMMAND
-# - $FZF_ALT_C_OPTS
-
-# Dependencies: `fd`, `bat, `rg`, `nufmt`, `tree`.
-
-# Code provided by @igor-ramazanov
-# Source: https://github.com/junegunn/fzf/issues/4122#issuecomment-2607368316
-
-
-export-env {
-  $env.FZF_DEFAULT_COMMAND = "fd --type f --hidden --strip-cwd-prefix --exclude .git"
-  $env.FZF_TMUX_OPTS = "--height 40%"
-  $env.FZF_CTRL_T_OPTS = "--preview 'bat --color=always --style=full --line-range=:500 {}' "
-  $env.FZF_CTRL_R_OPTS = "" # Options for history search
-  $env.FZF_ALT_C_COMMAND = "fd --type directory --hidden"
-  $env.FZF_ALT_C_OPTS = "--preview 'tree -C {} | head -n 200'"
-  $env.FZF_CTRL_T_COMMAND = $env.FZF_DEFAULT_COMMAND
-}
+$env.FZF_TMUX_OPTS = "--height 40%"
+$env.FZF_CTRL_T_OPTS = "--preview 'bat --color=always --style=full --line-range=:500 {}' "
+$env.FZF_CTRL_R_OPTS = "" # Options for history search
+$env.FZF_ALT_C_COMMAND = "fd --type directory --hidden"
+$env.FZF_ALT_C_OPTS = "--preview 'tree -C {} | head -n 200'"
+$env.FZF_DEFAULT_COMMAND = "fd --type f --hidden --strip-cwd-prefix --exclude .git"
+$env.FZF_CTRL_T_COMMAND = $env.FZF_DEFAULT_COMMAND
 
 # Directories
 const alt_c = {
@@ -86,15 +65,8 @@ const ctrl_t =  {
     ]
 }
 
-# Update the $env.config
-export-env {
-  if not ("__keybindings_loaded" in $env) {
-    $env.__keybindings_loaded = true
-
-    $env.config.keybindings ++= [
-      $alt_c
-      $ctrl_r
-      $ctrl_t
-    ]
-  }
-}
+$env.config.keybindings ++= [
+  $alt_c
+  # $ctrl_r
+  $ctrl_t
+]
