@@ -5,3 +5,4 @@ mako/colors
 rofi/shared/colors.rasi
 spicetify/Themes/Sleek/color.ini
 waybar/waybar.css
+nvim/lua/plugins/theme.lua
