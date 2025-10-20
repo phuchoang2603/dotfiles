@@ -1,12 +1,12 @@
 [Default Applications]
-x-scheme-handler/http=microsoft-edge-beta.desktop;
-x-scheme-handler/https=microsoft-edge-beta.desktop;
+x-scheme-handler/http=microsoft-edge-beta.desktop
+x-scheme-handler/https=microsoft-edge-beta.desktop
 x-scheme-handler/chrome=microsoft-edge-beta.desktop;
-text/html=microsoft-edge-beta.desktop;
+text/html=microsoft-edge-beta.desktop
 application/x-extension-htm=microsoft-edge-beta.desktop;
 application/x-extension-html=microsoft-edge-beta.desktop;
 application/x-extension-shtml=microsoft-edge-beta.desktop;
-application/xhtml+xml=microsoft-edge-beta.desktop;
+application/xhtml+xml=org.gnome.Epiphany.desktop
 application/x-extension-xhtml=microsoft-edge-beta.desktop;
 application/x-extension-xht=microsoft-edge-beta.desktop;
 image/png=org.gnome.Loupe.desktop;
@@ -31,7 +31,14 @@ video/x-ms-asf=mpv.desktop;
 video/x-ogm+ogg=mpv.desktop;
 video/x-theora+ogg=mpv.desktop;
 application/ogg=mpv.desktop;
-x-scheme-handler/about=microsoft-edge-beta.desktop;
+x-scheme-handler/about=microsoft-edge-beta.desktop
 x-scheme-handler/mailto=microsoft-edge-beta.desktop
+text/plain=nvim.desktop
+x-scheme-handler/unknown=microsoft-edge-beta.desktop
 
 [Added Associations]
+text/plain=nvim.desktop;
+x-scheme-handler/http=org.gnome.Epiphany.desktop;
+x-scheme-handler/https=org.gnome.Epiphany.desktop;
+text/html=org.gnome.Epiphany.desktop;
+application/xhtml+xml=org.gnome.Epiphany.desktop;
