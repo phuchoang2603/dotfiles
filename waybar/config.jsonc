@@ -6,8 +6,6 @@
 
   "margin-top": 2,
 
-  "output": "eDP-1",
-
   "modules-left": ["clock", "custom/todoist", "custom/docker"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": ["mpris", "tray", "cpu", "memory", "pulseaudio", "battery"],

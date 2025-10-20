@@ -1,16 +1,16 @@
 /**
  *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
+ * Author : Levi Lacoss (fishyfishfish55)
+ * Github : @fishyfishfish55
+ *
  * Colors
  **/
 
 * {
-    background:     #1E1D2F;
-    background-alt: #282839;
-    foreground:     #D9E0EE;
-    selected:       #cba6f7;
-    active:         #ABE9B3;
-    urgent:         #F28FAD;
+    background:     #15161E;
+    background-alt: #1A1B26;
+    foreground:     #C0CAF5;
+    selected:       #7aa2f7;
+    active:         #414868;
+    urgent:         #F7768E;
 }
