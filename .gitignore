@@ -1,4 +1,6 @@
 tmux/plugins
+
+# Themes
 hypr/colors.conf
 kitty/theme.conf
 mako/colors
@@ -6,3 +8,10 @@ rofi/shared/colors.rasi
 spicetify/Themes/Sleek/color.ini
 waybar/waybar.css
 nvim/lua/plugins/theme.lua
+
+# Hyprland machine specific
+hypr/monitors.conf
+hypr/workspaces.conf
+
+# Nushell history
+nushell/history.txt

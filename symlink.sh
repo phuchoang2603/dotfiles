@@ -10,7 +10,6 @@ mkdir -p "$CONFIG_TARGET"
 COPY_ITEMS=(
   "rclone"
   "obs-studio"
-  "nushell"
 )
 
 # Items to exclude from symlinking
