@@ -1,3 +1,5 @@
+let mise_exe = ($env.HOME)/.local/bin/mise
+
 export-env {
   
   $env.MISE_SHELL = "nu"
@@ -24,15 +26,15 @@ export def --env --wrapped main [command?: string, --help, ...rest: string] {
   let commands = ["deactivate", "shell", "sh"]
 
   if ($command == null) {
-    ^"/home/felix/.local/bin/mise"
+    ^$mise_exe
   } else if ($command == "activate") {
     $env.MISE_SHELL = "nu"
   } else if ($command in $commands) {
-    ^"/home/felix/.local/bin/mise" $command ...$rest
+    ^$mise_exe $command ...$rest
     | parse vars
     | update-env
   } else {
-    ^"/home/felix/.local/bin/mise" $command ...$rest
+    ^$mise_exe $command ...$rest
   }
 }
 
@@ -51,7 +53,7 @@ def --env "update-env" [] {
 }
 
 def --env mise_hook [] {
-  ^"/home/felix/.local/bin/mise" hook-env -s nu
+  ^$mise_exe hook-env -s nu
     | parse vars
     | update-env
 }
