@@ -8,7 +8,7 @@
  **/
 
 /*****----- Global Properties -----*****/
-@import                           "shared/colors.rasi"
+@import                           "colors.rasi"
 
 * {
     border-colour:                 var(selected);
