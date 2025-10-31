@@ -14,4 +14,5 @@ $env.CARAPACE_BRIDGES = 'bash'
 
 $env.PROMPT_INDICATOR_VI_NORMAL = ""
 $env.PROMPT_INDICATOR_VI_INSERT = ""
+$env.TERM = "xterm-256color"
 
