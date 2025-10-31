@@ -15,3 +15,7 @@ hypr/workspaces.conf
 
 # Nushell history
 nushell/history.txt
+
+# Obs Studio
+obs-studio
+!obs-studio/basic
