@@ -6,19 +6,11 @@ CONFIG_TARGET="$HOME/.config"
 
 mkdir -p "$CONFIG_TARGET"
 
-# Files or directories to copy (only their contents)
-COPY_ITEMS=(
-  "rclone"
-  "obs-studio"
-)
-
-# Items to exclude from symlinking
 EXCLUDE_ITEMS=(
   "symlink.sh"
   ".git"
   ".gitignore"
   "README.md"
-  "${COPY_ITEMS[@]}"
 )
 
 echo "🔗 Creating symlinks..."
@@ -37,23 +29,6 @@ for item in "$DOTFILES_DIR"/* "$DOTFILES_DIR"/.*; do
 
   echo "→ Symlink: $basename_item"
   rm -rf "$dest" && ln -s "$src" "$dest"
-done
-
-echo "📄 Copying contents into folders..."
-
-for item in "${COPY_ITEMS[@]}"; do
-  src="$DOTFILES_DIR/$item"
-  dest="$CONFIG_TARGET/$item"
-
-  echo "→ Copy contents of: $item"
-  mkdir -p "$dest"
-
-  for f in "$src"/*; do
-    [[ -e "$f" ]] || continue # skip if empty
-    fname=$(basename "$f")
-    echo "   ↪ $fname"
-    rm -rf "$dest/$fname" && cp -r "$f" "$dest/"
-  done
 done
 
 [ -f "~/.bashrc" ] && mv ~/.bashrc ~/.bashrc.bak

@@ -16,6 +16,9 @@ hypr/workspaces.conf
 # Nushell history
 nushell/history.txt
 
-# Obs Studio
-obs-studio
+# Obs Studio, but still track profile and scenes
+obs-studio/*
 !obs-studio/basic
+
+# Rclone config
+rclone/rclone.conf
