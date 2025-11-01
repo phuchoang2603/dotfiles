@@ -81,7 +81,7 @@
                 "custom_size": false,
                 "items": [
                     {
-                        "name": "kitty-terminal",
+                        "name": "screen2",
                         "source_uuid": "33e79a2e-1d51-46f1-9759-2af0e6320c1d",
                         "visible": false,
                         "locked": false,
@@ -218,7 +218,7 @@
         },
         {
             "prev_ver": 536870913,
-            "name": "kitty-terminal",
+            "name": "screen2",
             "uuid": "33e79a2e-1d51-46f1-9759-2af0e6320c1d",
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
@@ -316,6 +316,10 @@
             "autoStartRecordTimer": false,
             "pauseRecordTimer": true
         }
+    },
+    "resolution": {
+        "x": 3072,
+        "y": 1920
     },
     "version": 2
 }
