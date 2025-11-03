@@ -77,3 +77,6 @@ def tn [] {
         tmux new -s $session_name
     }
 }
+
+# bash-env
+use ~/.config/nushell/autoload/bash-env.nu 
