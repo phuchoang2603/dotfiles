@@ -10,7 +10,7 @@ $env.config = {
 }
 
 # ALIAS
-alias lt =  eza --tree --level=2 --long --icons --git
+alias lt =  eza --tree --level=2
 alias copy = rclone copy --progress --multi-thread-streams=32
 alias .. = cd ..
 alias ... = cd ../..

@@ -77,67 +77,12 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 2,
+                "id_counter": 3,
                 "custom_size": false,
                 "items": [
                     {
-                        "name": "screen2",
-                        "source_uuid": "33e79a2e-1d51-46f1-9759-2af0e6320c1d",
-                        "visible": false,
-                        "locked": false,
-                        "rot": 0.0,
-                        "scale_ref": {
-                            "x": 3072.0,
-                            "y": 1920.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds_crop": false,
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 1,
-                        "group_item_backup": false,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 32.0
-                        },
-                        "pos_rel": {
-                            "x": -1.600000023841858,
-                            "y": -0.9666666388511658
-                        },
-                        "scale": {
-                            "x": 1.003921627998352,
-                            "y": 1.0038293600082397
-                        },
-                        "scale_rel": {
-                            "x": 1.003921627998352,
-                            "y": 1.0038293600082397
-                        },
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_rel": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "screen1",
-                        "source_uuid": "105ea0c4-f08b-4a99-a758-61ba3acd6d80",
+                        "name": "dell",
+                        "source_uuid": "38a43c55-5e45-4cf6-8cbf-8fab7318d967",
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
@@ -153,14 +98,14 @@
                         "crop_top": 0,
                         "crop_right": 0,
                         "crop_bottom": 0,
-                        "id": 2,
+                        "id": 3,
                         "group_item_backup": false,
                         "pos": {
                             "x": 0.0,
                             "y": 0.0
                         },
                         "pos_rel": {
-                            "x": -1.600000023841858,
+                            "x": -1.7777777910232544,
                             "y": -1.0
                         },
                         "scale": {
@@ -168,8 +113,8 @@
                             "y": 1.0
                         },
                         "scale_rel": {
-                            "x": 1.0,
-                            "y": 1.0
+                            "x": 1.7777777910232544,
+                            "y": 1.7777777910232544
                         },
                         "bounds": {
                             "x": 0.0,
@@ -205,10 +150,8 @@
             "push-to-talk-delay": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.1": [],
-                "libobs.hide_scene_item.1": [],
-                "libobs.show_scene_item.2": [],
-                "libobs.hide_scene_item.2": []
+                "libobs.show_scene_item.3": [],
+                "libobs.hide_scene_item.3": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -218,34 +161,8 @@
         },
         {
             "prev_ver": 536870913,
-            "name": "screen2",
-            "uuid": "33e79a2e-1d51-46f1-9759-2af0e6320c1d",
-            "id": "pipewire-screen-capture-source",
-            "versioned_id": "pipewire-screen-capture-source",
-            "settings": {
-                "RestoreToken": ""
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 536870913,
-            "name": "screen1",
-            "uuid": "105ea0c4-f08b-4a99-a758-61ba3acd6d80",
+            "name": "dell",
+            "uuid": "38a43c55-5e45-4cf6-8cbf-8fab7318d967",
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
@@ -318,8 +235,8 @@
         }
     },
     "resolution": {
-        "x": 3072,
-        "y": 1920
+        "x": 1920,
+        "y": 1080
     },
     "version": 2
 }
