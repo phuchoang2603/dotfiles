@@ -2,6 +2,9 @@ matches:
   - trigger: ":name"
     replace: "Felix Hoang"
 
+  - trigger: ":uid"
+    replace: "83765874"
+
   - trigger: ":phone"
     replace: "8136097656"
 
