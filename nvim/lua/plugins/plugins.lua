@@ -134,4 +134,12 @@ return {
       require("gitignore")
     end,
   },
+  -- vimtex
+  {
+    "lervag/vimtex",
+    lazy = false, -- we don't want to lazy load VimTeX
+    init = function()
+      vim.g.maplocalleader = " "
+    end,
+  },
 }
