@@ -32,8 +32,6 @@ for item in "$DOTFILES_DIR"/* "$DOTFILES_DIR"/.*; do
 done
 
 [ -f "~/.bashrc" ] && mv ~/.bashrc ~/.bashrc.bak
-cp ~/.config/bashrc ~/.bashrc
-[ -f "~/.inputrc" ] && mv ~/.inputrc ~/.inputrc.bak
-cp ~/.config/inputrc ~/.inputrc
+rm ~/.bashrc && ln -s ~/.config/bashrc ~/.bashrc
 
 echo "✅ Done."

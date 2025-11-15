@@ -34,17 +34,8 @@ if command -v starship &>/dev/null; then
   eval "$(starship init bash)"
 fi
 
-if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
-  tmux new-session -A -s ${USER} >/dev/null 2>&1
-fi
-
 if [ -f "$HOME/.cargo/env" ]; then
   . "$HOME/.cargo/env"
-fi
-
-if command -v kubectl &>/dev/null; then
-  export KUBECONFIG=$(find ~/.kube \( -name '*.yaml' -o -name '*.yml' \) -print0 | xargs -0 echo | tr ' ' ':')
-  source <(kubectl completion bash)
 fi
 
 if command -v zoxide &>/dev/null; then
