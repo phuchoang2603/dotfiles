@@ -15,26 +15,34 @@ return {
       {
         "<leader>oa",
         function()
-          require("opencode").ask()
+          require("opencode").ask("@this: ", { submit = true })
         end,
-        mode = "n",
-        desc = "OpenCode ask",
+        mode = { "n", "x" },
+        desc = "Ask opencode",
       },
       {
-        "<leader>oa",
-        function()
-          require("opencode").ask("@this: ")
-        end,
-        mode = "v",
-        desc = "OpenCode ask with selection",
-      },
-      {
-        "<leader>op",
+        "<leader>ox",
         function()
           require("opencode").select()
         end,
-        mode = { "n", "v" },
-        desc = "OpenCode select prompt",
+        mode = { "n", "x" },
+        desc = "Execute opencode action…",
+      },
+      {
+        "<leader>og",
+        function()
+          require("opencode").prompt("@this")
+        end,
+        mode = { "n", "x" },
+        desc = "Add to opencode",
+      },
+      {
+        "<leader>ot",
+        function()
+          require("opencode").toggle()
+        end,
+        mode = { "n", "t" },
+        desc = "Toggle opencode",
       },
     },
   },

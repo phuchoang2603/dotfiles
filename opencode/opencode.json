@@ -1,0 +1,21 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "theme": "system",
+  "permission": {
+    "edit": "ask",
+    "bash": "ask"
+  },
+  "mcp": {
+    "mcp-obsidian": {
+      "type": "local",
+      "command": ["uvx", "mcp-obsidian"],
+      "enabled": true,
+      "environment": {
+        "OBSIDIAN_API_KEY": "f23c2feae67c9a2b3cfc97c9f536d3167d2ff05497d93cec0dfb7cd6bdebb0d3"
+      }
+    }
+  },
+  "tools": {
+    "mcp*": false
+  }
+}
