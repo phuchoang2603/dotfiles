@@ -24,6 +24,19 @@
         "OBSIDIAN_HOST": "127.0.0.1",
         "OBSIDIAN_PORT": "27123"
       }
+    },
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "ctx7sk-6349cb61-fe3f-4d1a-b064-9deab9aa0ad3"
+      },
+      "enabled": true
+    },
+    "playwright": {
+      "type": "local",
+      "command": ["npx", "@playwright/mcp@latest"],
+      "enabled": true
     }
   }
 }
