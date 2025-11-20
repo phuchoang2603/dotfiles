@@ -20,12 +20,13 @@ CRITICAL - Writing Style Requirements:
    - Paragraph structure and flow
 
 2. **Avoid AI-generic patterns**:
-   - NO generic phrases like "in today's digital landscape", "it's important to note", "in conclusion"
+   - NO generic phrases like "aha moment", "in today's digital landscape", "it's important to note", "in conclusion"
    - NO listicle-style introductions ("Here are 5 ways...")
    - NO corporate buzzwords or marketing speak
    - NO overly enthusiastic or salesy language
    - NO emoji unless the user's style explicitly uses them
    - NO unnecessary adverbs or filler words
+   - NO em-dashes unless the user frequently uses them
 
 3. **Match authentic human writing**:
    - Use natural transitions, not formulaic ones
