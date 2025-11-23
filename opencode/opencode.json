@@ -37,6 +37,15 @@
       "type": "local",
       "command": ["npx", "@playwright/mcp@latest"],
       "enabled": true
+    },
+    "excalidraw": {
+      "type": "local",
+      "command": ["node", "/home/felix/repos/mcp_excalidraw/dist/index.js"],
+      "enabled": true,
+      "environment": {
+        "EXPRESS_SERVER_URL": "http://localhost:3000",
+        "ENABLE_CANVAS_SYNC": "true"
+      }
     }
   }
 }

@@ -23,6 +23,9 @@ matches:
   - trigger: ":street"
     replace: "12810 University Club Dr"
 
+  - trigger: ":school"
+    replace: "University of South Florida"
+
   - trigger: ":gmail"
     replace: "xuanphuc.a1gv@gmail.com"
 
