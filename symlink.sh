@@ -31,7 +31,12 @@ for item in "$DOTFILES_DIR"/* "$DOTFILES_DIR"/.*; do
   rm -rf "$dest" && ln -s "$src" "$dest"
 done
 
-[ -f "~/.bashrc" ] && mv ~/.bashrc ~/.bashrc.bak
-rm ~/.bashrc && ln -s ~/.config/bashrc ~/.bashrc
+[ -f "$HOME/.bashrc" ] && mv "$HOME/.bashrc" "$HOME/.bashrc.bak"
+ln -sf "$DOTFILES_DIR/zsh/.bashrc" "$HOME/.bashrc"
+
+[ -f "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.bak"
+ln -sf "$DOTFILES_DIR/zsh/.zshrc" "$HOME/.zshrc"
+
+source "$HOME/.zshrc"
 
 echo "✅ Done."

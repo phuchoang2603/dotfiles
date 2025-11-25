@@ -16,6 +16,10 @@ hypr/workspaces.conf
 # Nushell history
 nushell/history.txt
 
+# Zsh history
+zsh/.zsh_history
+zsh/.zcompdump*
+
 # Obs Studio, but still track profile and scenes
 obs-studio/*
 !obs-studio/basic
