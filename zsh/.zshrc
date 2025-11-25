@@ -71,6 +71,11 @@ bindkey '^U' kill-whole-line
 # Ctrl+A - move to beginning of line
 bindkey '^A' beginning-of-line
 
+# Ctrl+X - edit command line in editor
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^X' edit-command-line
+
 # -----------------------------------------------------------------------------
 # Completion System
 # -----------------------------------------------------------------------------
@@ -78,6 +83,11 @@ bindkey '^A' beginning-of-line
 # Enable completion system
 autoload -Uz compinit
 compinit
+
+# kubectl completion (must be after compinit)
+if command -v kubectl &>/dev/null; then
+  source <(kubectl completion zsh)
+fi
 
 # Case insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -109,17 +119,20 @@ if [ -f ~/.config/zsh/fzf-tab/fzf-tab.plugin.zsh ]; then
   zstyle ':fzf-tab:*' switch-group '<' '>'
 
   # Disable preview
-  zstyle ':fzf-tab:complete:*:options' fzf-preview 
-  zstyle ':fzf-tab:complete:*:argument-1' fzf-preview
- 
-  # Enable preview only for specific contexts
-  # Preview directory contents with cd
-  zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath 2>/dev/null || ls --color=always $realpath'
- 
-  # Preview for kill/ps
-  zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
-  zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-preview '[[ $group == "[process ID]" ]] && ps --pid=$word -o cmd --no-headers -w -w'
-  zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-flags --preview-window=down:3:wrap
+  zstyle ':fzf-tab:complete:*' fzf-flags --preview-window hidden 
+fi
+
+# -----------------------------------------------------------------------------
+# zsh-autosuggestions Plugin
+# -----------------------------------------------------------------------------
+
+# Load zsh-autosuggestions
+if [ -f ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+  
+  # Configure autosuggestions
+  ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+  ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 fi
 
 # -----------------------------------------------------------------------------
@@ -137,3 +150,12 @@ setopt NO_BEEP
 
 # Enable extended globbing
 setopt EXTENDED_GLOB
+
+# -----------------------------------------------------------------------------
+# zsh-syntax-highlighting Plugin (MUST BE LAST!)
+# -----------------------------------------------------------------------------
+
+# Load zsh-syntax-highlighting (must be at the end of .zshrc)
+if [ -f ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi

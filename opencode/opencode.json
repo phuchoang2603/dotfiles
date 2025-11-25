@@ -41,7 +41,7 @@
     "excalidraw": {
       "type": "local",
       "command": ["node", "/home/felix/repos/mcp_excalidraw/dist/index.js"],
-      "enabled": true,
+      "enabled": false,
       "environment": {
         "EXPRESS_SERVER_URL": "http://localhost:3000",
         "ENABLE_CANVAS_SYNC": "true"
