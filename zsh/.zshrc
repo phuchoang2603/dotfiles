@@ -150,12 +150,3 @@ setopt NO_BEEP
 
 # Enable extended globbing
 setopt EXTENDED_GLOB
-
-# -----------------------------------------------------------------------------
-# zsh-syntax-highlighting Plugin (MUST BE LAST!)
-# -----------------------------------------------------------------------------
-
-# Load zsh-syntax-highlighting (must be at the end of .zshrc)
-if [ -f ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-  source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
