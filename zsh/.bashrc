@@ -2,18 +2,19 @@
 # Bash Configuration
 
 # -----------------------------------------------------------------------------
-# History Configuration
+# Bash-specific Configuration (only run in bash)
 # -----------------------------------------------------------------------------
-shopt -s histappend
-HISTCONTROL=ignoreboth
-HISTSIZE=32768
-HISTFILESIZE="${HISTSIZE}"
+if [ -n "$BASH_VERSION" ]; then
+  # History Configuration
+  shopt -s histappend
+  HISTCONTROL=ignoreboth
+  HISTSIZE=32768
+  HISTFILESIZE="${HISTSIZE}"
 
-# -----------------------------------------------------------------------------
-# Bash Completion
-# -----------------------------------------------------------------------------
-if [ -f /usr/share/bash-completion/bash_completion ]; then
-  source /usr/share/bash-completion/bash_completion
+  # Bash Completion
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    source /usr/share/bash-completion/bash_completion
+  fi
 fi
 
 # -----------------------------------------------------------------------------
