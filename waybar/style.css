@@ -11,18 +11,13 @@ window#waybar {
   border: 0px;
 }
 
-#tray,
+#clock,
 #custom-docker,
 #custom-todoist,
-#clock,
-#mpris,
 #workspaces button,
-#cpu,
-#memory,
-#network,
-#bluetooth,
-#pulseaudio,
-#battery {
+#mpris,
+#tray,
+#system {
   background-color: @color0;
   border: 1px solid @color1;
   color: @color1;
@@ -32,11 +27,17 @@ window#waybar {
 }
 
 #clock,
-#battery,
+#system,
 #workspaces button.active {
   background-color: @color1;
   border: 1px solid @color0;
   color: @color0;
+}
+
+#memory,
+#pulseaudio,
+#battery {
+  margin-left: 8px;
 }
 
 #workspaces button.active {
